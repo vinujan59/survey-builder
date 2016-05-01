@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<project name="maven-antrun-" default="main"  >
+<target name="main">
+  <mkdir dir="target/generated-resources/appassembler/jsw/surveybuilder-server/logs"/>
+  <copy todir="target/generated-resources/appassembler/jsw/surveybuilder-server/conf">
+    <fileset dir="target/surveybuilder-server/conf"/>
+  </copy>
+  <delete includeemptydirs="true" dir="target/surveybuilder-server"/>
+</target>
+</project>

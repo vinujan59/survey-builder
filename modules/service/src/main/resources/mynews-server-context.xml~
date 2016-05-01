@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns="http://www.springframework.org/schema/beans"
+       xmlns:task="http://www.springframework.org/schema/task"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd
+        http://www.springframework.org/schema/task
+        http://www.springframework.org/schema/task/spring-task-3.1.xsd">
+
+    <context:annotation-config/>
+
+    <context:component-scan base-package="com.arima.mynews"/>
+
+    <context:property-placeholder location="classpath:mynews-server.properties"/>
+
+    <bean id="mediaApi" class="com.arima.mothercare.api.MediaApi"/>
+    <bean id="newsApi" class="com.arima.mothercare.api.NewsApi"/>
+    <bean id="userApi" class="com.arima.mothercare.api.UserApi"/>
+
+    <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
+
+    <bean id="corsFilter" class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
+
+    <bean id="authFilter" class="com.arima.mothercare.util.AuthorizationFilter"/>
+
+    <bean id="exceptionHandler" class="com.arima.mothercare.util.ApiExceptionHandler"/>
+
+    <bean id="taskExecutor"
+          class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="corePoolSize" value="5"/>
+        <property name="maxPoolSize" value="10"/>
+        <property name="WaitForTasksToCompleteOnShutdown" value="true"/>
+    </bean>
+
+    <import resource="mynews-server-rest-context.xml"/>
+
+    <import resource="mynews-data-config.xml"/>
+
+    <bean id="rssRunner" class="com.arima.mothercare.rss.RssRunner"/>
+
+    <!-- Run every 5 seconds -->
+    <task:scheduled-tasks>
+        <task:scheduled ref="rssRunner" method="run" fixed-delay="${rss.poll.interval}" />
+        <!--<task:scheduled ref="runScheduler" method="run"-->
+                        <!--cron="*/5 * * * * *" />-->
+    </task:scheduled-tasks>
+
+</beans>
