@@ -16,13 +16,17 @@
 
     <context:property-placeholder location="classpath:surveybuilder-server.properties"/>
 
-    <bean id="questionApi" class="com.arima.surveybuilder.api.questionApi"/>
+    <bean id="questionApi" class="com.arima.surveybuilder.api.SurveyApi"/>
+
+    <bean id="userApi" class="com.arima.surveybuilder.api.UserApi"/>
 
     <bean id="jsonProvider" class="com.fasterxml.jackson.jaxrs.json.JacksonJsonProvider"/>
 
     <bean id="corsFilter" class="org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter"/>
 
     <bean id="exceptionHandler" class="com.arima.surveybuilder.util.ApiExceptionHandler"/>
+
+    <bean id="authFilter" class="com.arima.surveybuilder.util.AuthorizationFilter"/>
 
     <import resource="surveybuilder-server-rest-context.xml"/>
 

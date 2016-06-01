@@ -20,19 +20,19 @@ public class ApiExceptionHandler implements ExceptionMapper<Exception> {
     @Produces(MediaType.APPLICATION_JSON)
     public Response toResponse(Exception e) {
 
-        SBResponse mnResponse;
+        SBResponse sbResponse;
         if (e instanceof SBException) {
-            logger.debug("SoulException handled: {}", e.toString());
+            logger.debug("SurveyBuilderException handled: {}", e.toString());
             SBStatus status = ((SBException) e).status;
-            mnResponse = new SBResponse(status);
+            sbResponse = new SBResponse(status);
         } else {
             logger.error("Exception ", e);
-            mnResponse = new SBResponse(SBStatus.ERROR);
+            sbResponse = new SBResponse(SBStatus.ERROR);
         }
 
         return Response
                 .ok()
-                .entity(mnResponse)
+                .entity(sbResponse)
                 .type(MediaType.APPLICATION_JSON)
                 .build();
     }

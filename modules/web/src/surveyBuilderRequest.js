@@ -1,6 +1,6 @@
 import request from 'superagent';
 
-var baseUrl = 'http://52.76.3.40:9003/mynews/service';
+var baseUrl = 'http://127.0.0.1:9004/surveybuilder/service';
 
 var surveyBuilderRequest = {
     post: function (uri, body) {

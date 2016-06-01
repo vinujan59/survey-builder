@@ -13,7 +13,7 @@
     </appender>
 
     <appender name="debug" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/arima/logs/surveybuilder/surveybuilder-debug.log"/>
+        <param name="File" value="/home/vinujan/arima/logs/surveybuilder/surveybuilder-debug.log"/>
         <param name="Threshold" value="debug"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
         <layout class="org.apache.log4j.PatternLayout">
@@ -23,7 +23,7 @@
     </appender>
 
     <appender name="error" class="org.apache.log4j.DailyRollingFileAppender">
-        <param name="File" value="/arima/logs/surveybuilder/surveybuilder-error.log"/>
+        <param name="File" value="/home/vinujan/arima/logs/surveybuilder/surveybuilder-error.log"/>
         <param name="Threshold" value="error"/>
         <param name="DatePattern" value="'.'yyyy-MM-dd'.log'"/>
         <layout class="org.apache.log4j.PatternLayout">

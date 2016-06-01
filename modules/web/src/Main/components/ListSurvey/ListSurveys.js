@@ -3,12 +3,13 @@ import {Card} from 'material-ui';
 require('bootstrap/dist/css/bootstrap.min.css');
 
 import SurveyTable from './SurveyTable'
+import SurveyActions from './../../actions/SurveyActions'
 
 export default class ListSurveys extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            surveys: [
+            surveys1: [
                 {
                     id: 'asd123',
                     uri: 'asd123',
@@ -23,16 +24,15 @@ export default class ListSurveys extends Component {
 
         };
     }
+    componentDidMount() {
+        SurveyActions.getAllSurveys();
+    }
 
 
     render() {
-        if (!this.state.surveys) {
-            return <div>Loading ... </div>
-        }
-
         return (
             <Card>
-                <SurveyTable surveys={this.state.surveys}/>
+                <SurveyTable surveys={this.state.surveys1}/>
             </Card>
         );
     }

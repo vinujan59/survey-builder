@@ -25,10 +25,12 @@
                   depends-on="surveybuilder-server-jetty-config">
         <jaxrs:serviceBeans>
             <ref bean="questionApi"/>
+            <ref bean="userApi"/>
         </jaxrs:serviceBeans>
         <jaxrs:providers>
             <ref bean="jsonProvider"/>
             <ref bean="corsFilter"/>
+            <ref bean="authFilter"/>
             <ref bean="exceptionHandler"/>
         </jaxrs:providers>
     </jaxrs:server>

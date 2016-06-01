@@ -12,8 +12,8 @@ Create /arima/logs/surveybuilder directory for logs
 
 Run mongo in port 27111
 
-Run mvn clean install, It will create mothercare-server.zip. 
-Unzip and run ./mothercare-server start inside bin directory. 
+Run mvn clean install, It will create surveybuilder-server.zip.
+Unzip and run ./surveybuilder-server start inside bin directory.
 
 
 
