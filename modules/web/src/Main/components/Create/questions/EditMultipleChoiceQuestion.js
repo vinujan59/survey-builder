@@ -1,6 +1,6 @@
 import React, {Component,PropTypes} from 'react'
 import EditQuestion from './EditQuestion'
-import { TextField} from 'material-ui';
+import { TextField,Checkbox} from 'material-ui';
 
 var merge = require('lodash-node/modern/object/merge');
 
@@ -15,9 +15,14 @@ export default class  EditMultipleChoiceQuestion extends Component {
     options = options.map(function (option, i) {
       return (
         <li key={i} className='option'>
-            <input
-                type='text' className='small' value={option} onChange={this.handleOptionChange.bind(this,i)}
-            />
+          <TextField
+              className="small"
+              value={option}
+              onChange={this.handleOptionChange.bind(this,i)}
+              multiLine={false}
+              rows={2}
+              type='text'
+          />
           <a className='remove-option' onClick={this.handleOptionRemove.bind(this,i)}>
             <span className='glyphicon glyphicon-remove'/>
           </a>
@@ -28,10 +33,17 @@ export default class  EditMultipleChoiceQuestion extends Component {
     return (
       <EditQuestion type='multiple_choice' className='edit-multiple-choice' onRemove={this.handleRemove.bind(this)}>
         <label>Description</label>
-          <input
-              type='text' className='description' value={description} onChange={this.handleDescriptionChange.bind(this)}
-          />
-
+        <TextField
+            floatingLabelText="Question"
+            fullWidth={true}
+            multiLine={true}
+            rows={3}
+            type='text' className='description' value={description} onChange={this.handleDescriptionChange.bind(this)}
+        />
+        <Checkbox
+            onCheck={this.handleOnCheck.bind(this)}
+            label="Enable Multiple Choice"
+        />
         <label>Options</label>
         <ul className='options list-unstyled'>
           {options}
@@ -72,6 +84,9 @@ export default class  EditMultipleChoiceQuestion extends Component {
 
   handleRemove () {
     this.props.onRemove(this.props.key);
+  }
+  handleOnCheck(){
+
   }
 }
 

@@ -29,4 +29,10 @@ public class QuestionService {
     public List<Questions> getAll(){
         return surveyRepository.findAll();
     }
+
+    public String deleteSurvey(String id){
+        LOGGER.debug("deleted survey: {}", id);
+        surveyRepository.delete(surveyRepository.findOne(id));
+        return "Success";
+    }
 }

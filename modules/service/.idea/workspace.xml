@@ -2,95 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0cfdc6e-4108-4be1-9acf-ab0e25ee3803" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/UserApi.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/UserRepository.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/EssayQuestion.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Question.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/User.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/message/PasswordChangeReq.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/AuthService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/UserService.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/util/AuthorizationFilter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/util/Authorize.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/util/ISODateTimeSerializer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/util/MD5.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/actions/SettingsActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/actions/UserActions.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/AccountSetting.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/ChangePassword.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Main.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/containers/AccountSettingContainer.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/sources/SettingsSource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/sources/UserSource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/stores/SettingsStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/stores/UserStore.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/answers/answer_essay_question_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/answers/answer_multiple_choice_question_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/answers/answer_yes_no_question_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/main_header_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/main_nav_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/questions/edit_essay_equestion_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/questions/edit_multiple_choice_question_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/questions/edit_question_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/questions/edit_yes_no_question_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/survey_editor_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/survey_form_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/survey_table_row_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/survey_table_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/take_survey_ctrl_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/take_survey_item_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/app/components/take_survey_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/interval_mixin_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/render_into_body_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/render_into_document_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/simulate_click_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/since_2014_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/spy_on_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/stub_subcomponent_with_require_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/stub_supcomponent_with_script_tag_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/fundamentals/test_utils_finders_spec.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/helpers/rewire-jasmine.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/shared_examples/custom_logger_shared_examples.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/shared_examples/interval_mixin_shared_examples.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/client/support/phantomjs-shims.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/test/functional/adding_a_survey.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/Main.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/actions/HomeActions.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/components/AdminMain.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/components/Home.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/containers/HomeContainer.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/sources/HomeSource.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../web/src/Main/stores/HomeStore.js" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/questionApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/api/questionApi.class" afterPath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/api/questionApi.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/message/SBStatus.class" afterPath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/message/SBStatus.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/AnswerSurvey.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/SelectQuestion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/mixins/PropsMethodMixin.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/types/AnswerEssayQuestion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/types/AnswerFactory.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/types/AnswerMultipleChoiceQuestion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/types/AnswerRadioInput.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/components/Answer/types/AnswerYesNoQuestion.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/../web/src/Main/containers/EditSurveyContainer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/service/QuestionService.class" afterPath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/service/QuestionService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/util/ApiExceptionHandler.class" afterPath="$PROJECT_DIR$/target/classes/com/arima/surveybuilder/util/ApiExceptionHandler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/readme.md" afterPath="$PROJECT_DIR$/readme.md" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/message/SBStatus.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/message/SBStatus.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/QuestionService.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/QuestionService.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/util/ApiExceptionHandler.java" afterPath="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/util/ApiExceptionHandler.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/log4j.xml" afterPath="$PROJECT_DIR$/src/main/resources/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/surveybuilder-server-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/surveybuilder-server-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/surveybuilder-server-rest-context.xml" afterPath="$PROJECT_DIR$/src/main/resources/surveybuilder-server-rest-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/surveybuilder-server.iml" afterPath="$PROJECT_DIR$/surveybuilder-server.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surveybuilder-server/conf/log4j.xml" afterPath="$PROJECT_DIR$/target/surveybuilder-server/conf/log4j.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surveybuilder-server/conf/surveybuilder-server-context.xml" afterPath="$PROJECT_DIR$/target/surveybuilder-server/conf/surveybuilder-server-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/surveybuilder-server/conf/surveybuilder-server-rest-context.xml" afterPath="$PROJECT_DIR$/target/surveybuilder-server/conf/surveybuilder-server-rest-context.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/package.json" afterPath="$PROJECT_DIR$/../web/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/Main.scss" afterPath="$PROJECT_DIR$/../web/src/Main/Main.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/actions/SurveyActions.js" afterPath="$PROJECT_DIR$/../web/src/Main/actions/SurveyActions.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/app.css" afterPath="$PROJECT_DIR$/../web/src/Main/app.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/Create/EditSurvey.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/Create/EditSurvey.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/Create/SurveyEditor.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/Create/SurveyEditor.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/ListSurvey/ListSurveys.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/ListSurvey/ListSurveys.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/Login.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/Login.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/ListSurvey/SurveyTable.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/ListSurvey/SurveyTable.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/ListSurvey/SurveyTableRow.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/ListSurvey/SurveyTableRow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/components/Main.js" afterPath="$PROJECT_DIR$/../web/src/Main/components/Main.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/containers/ListSurveyContainer.js" afterPath="$PROJECT_DIR$/../web/src/Main/containers/ListSurveyContainer.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/sources/SurveySource.js" afterPath="$PROJECT_DIR$/../web/src/Main/sources/SurveySource.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/Main/stores/SurveyStore.js" afterPath="$PROJECT_DIR$/../web/src/Main/stores/SurveyStore.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/routes.js" afterPath="$PROJECT_DIR$/../web/src/routes.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../web/src/surveyBuilderRequest.js" afterPath="$PROJECT_DIR$/../web/src/surveyBuilderRequest.js" />
     </list>
     <ignored path="mothercare-server.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -118,9 +56,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -129,46 +65,48 @@
         <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+              <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuestionService.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="QuestionService.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/QuestionService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48939642">
-              <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#871#872#0" expanded="true" />
-                <element signature="e#920#921#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserRepository.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/UserRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="25" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SurveyRepository.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="SurveyRepository.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.18703242">
+              <caret line="5" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CrudRepository.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.1.RELEASE/spring-data-commons-1.9.1.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+          <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+              <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Repository.class" pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.1.RELEASE/spring-data-commons-1.9.1.RELEASE.jar!/org/springframework/data/repository/Repository.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -221,10 +159,10 @@
         <option value="$PROJECT_DIR$/src/main/resources/log4j.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/EssayQuestion.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Question.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/QuestionService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/QuestionService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java" />
       </list>
     </option>
   </component>
@@ -271,8 +209,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -662,65 +600,6 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="true" type="ArquillianTestNG" factoryName="">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <module name="" />
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="ANNOTATION_TYPE" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <envs />
-      <properties />
-      <listeners />
-      <method />
-    </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="myFilePath" />
@@ -1031,7 +910,9 @@
       <workItem from="1464368644150" duration="4270000" />
       <workItem from="1464378100892" duration="131000" />
       <workItem from="1464378273941" duration="9005000" />
-      <workItem from="1464675696195" duration="13065000" />
+      <workItem from="1464675696195" duration="19729000" />
+      <workItem from="1465283438949" duration="1885000" />
+      <workItem from="1465384140702" duration="792000" />
     </task>
     <task id="LOCAL-00001" summary="conflict resolve">
       <created>1462135391675</created>
@@ -1043,23 +924,22 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39915000" />
+    <option name="totallyTimeSpent" value="49256000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="43" y="24" width="1323" height="744" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32426304" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2191988" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1068,9 +948,11 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2494331" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Documentation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="FLOATING" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" x="143" y="180" width="1123" height="544" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1106,29 +988,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="30" column="24" selection-start-line="30" selection-start-column="24" selection-end-line="30" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/surveybuilder-server.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="17" selection-start-line="1" selection-start-column="17" selection-end-line="1" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/surveybuilder-data-config.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1281,23 +1140,21 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/readme.md">
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.02446982">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
           <first_editor vertical-scroll-proportion="0.0">
             <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            <folding />
           </first_editor>
           <second_editor />
         </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/surveybuilder-server.iml">
@@ -1319,14 +1176,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6606852">
           <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.1.RELEASE/spring-data-commons-1.9.1.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30821916">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -1383,7 +1232,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.23116438">
           <caret line="28" column="13" selection-start-line="28" selection-start-column="13" selection-end-line="28" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1395,22 +1243,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1680261">
-          <caret line="89" column="57" selection-start-line="89" selection-start-column="57" selection-end-line="89" selection-end-column="57" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Question.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1419,7 +1257,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.122349106">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1455,50 +1292,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/UserApi.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1680261">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/User.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-mongodb/1.6.1.RELEASE/spring-data-mongodb-1.6.1.RELEASE.jar!/org/springframework/data/mongodb/repository/MongoRepository.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3670473">
-          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="36" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="13" selection-start-line="0" selection-start-column="13" selection-end-line="0" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.17979452">
+          <caret line="14" column="17" selection-start-line="14" selection-start-column="17" selection-end-line="14" selection-end-column="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/UserRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="25" />
+          <caret line="8" column="49" selection-start-line="8" selection-start-column="49" selection-end-line="8" selection-end-column="49" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/UserApi.java">
+    <entry file="jar://$USER_HOME$/software/jdk1.8.0_65/src.zip!/java/io/Serializable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8042414">
+          <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/UserService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
+          <caret line="99" column="35" selection-start-line="99" selection-start-column="35" selection-end-line="99" selection-end-column="35" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/domain/Questions.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6574225">
+          <caret line="28" column="0" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1506,20 +1357,40 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/api/SurveyApi.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
+          <caret line="43" column="55" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/service/QuestionService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48939642">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#871#872#0" expanded="true" />
-            <element signature="e#920#921#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/arima/surveybuilder/data/repo/SurveyRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18703242">
+          <caret line="5" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.1.RELEASE/spring-data-commons-1.9.1.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="70" selection-start-line="12" selection-start-column="70" selection-end-line="12" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.9.1.RELEASE/spring-data-commons-1.9.1.RELEASE.jar!/org/springframework/data/repository/Repository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>

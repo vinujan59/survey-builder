@@ -83,10 +83,13 @@ a {
 .survey-item-label {
   color: #4abfe2;
   margin-bottom: 12px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .survey-item-content {
-  margin-left: 24px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 /* .form-control ------------------------------------------------------------*/
@@ -224,6 +227,11 @@ a {
   margin-top: 30px;
   text-align: right;
 }
+/*for raised button */
+.actionButton{
+  padding-left: 10px;
+  padding-right: 10px;
+}
 
 .survey-editor .drop-zone {
   -webkit-transition: all 0.2s;
@@ -260,6 +268,11 @@ a {
 }
 
 /* .edit-question ---------------------------------------------------------- */
+.edit-question .type .icon {
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+}
 .edit-question .type {
   color: #fff;
   background: #4abfe2;

@@ -1,49 +1,36 @@
 import React, {Component,PropTypes} from 'react'
-import {TableRow, TableRowColumn} from 'material-ui';
+import {TableRow, TableRowColumn,FontIcon} from 'material-ui';
 import {Link} from 'react-router'
 require('bootstrap/dist/css/bootstrap.min.css');
 import Sparkline from './Sparkline'
-
-var MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
-
-var formatDate = function (date) {
-    return MONTHS[date.getMonth()] + ' ' + date.getDate() + ', ' + date.getFullYear();
-};
-
+import moment from 'moment'
 function integerWithThousandsSeparator(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
 }
+import SurveyActions from './../../actions/SurveyActions'
 
 export default class SurveyTableRow extends Component {
     constructor(props) {
         super(props);
+    }
 
+    openEdit(){
+        this.props.openEdit(this.props.survey);
     }
 
     render() {
         var survey = this.props.survey;
 
-        var total = survey.activity.reduce(function (memo, n) {
-            return memo + n;
-        }, 0);
-
         return (
             <TableRow>
                 <TableRowColumn>
-                    <Link to='take' surveyId={survey.id} className='title'>
                         {survey.title}
-                    </Link>
                 </TableRowColumn>
-                <TableRowColumn className='published'>{formatDate(survey.publishedDate)}</TableRowColumn>
-                <TableRowColumn className='modified'>{formatDate(survey.modifiedDate)}</TableRowColumn>
-                <TableRowColumn className='total'>{integerWithThousandsSeparator(total)}</TableRowColumn>
-                <TableRowColumn className='activity'>
-                    <Sparkline points={survey.activity} />
-                </TableRowColumn>
+                <TableRowColumn className='published'>{moment(survey.createdTime).format('DD MMM YYYY, h:mm A')}</TableRowColumn>
+                <TableRowColumn className='modified'>{moment(survey.modifiedTime).format('DD MMM YYYY, h:mm A')}</TableRowColumn>
+                <TableRowColumn className='total'>{integerWithThousandsSeparator(50)}</TableRowColumn>
                 <TableRowColumn>
-                    <Link to='edit' surveyId={survey.id} className="btn btn-link btn-editSurvey edit">
-                        <i className="glyphicon glyphicon-pencil"></i>
-                    </Link>
+                    <FontIcon className="fa fa-edit fa-2x" onClick={this.openEdit.bind(this)}></FontIcon>
                 </TableRowColumn>
             </TableRow>
         );
@@ -54,8 +41,6 @@ SurveyTableRow.propTypes = {
     survey: React.PropTypes.shape({
         id: React.PropTypes.string.isRequired,
         title: React.PropTypes.string.isRequired,
-        publishedDate: React.PropTypes.instanceOf(Date).isRequired,
-        modifiedDate: React.PropTypes.instanceOf(Date).isRequired,
-        activity: React.PropTypes.array.isRequired
-    }).isRequired
+    }).isRequired,
+    tabToggle: React.PropTypes.func.isRequired
 };

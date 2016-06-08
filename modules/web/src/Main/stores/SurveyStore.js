@@ -9,6 +9,7 @@ class SurveyStore {
         console.log('Initializing SurveyStore');
 
         this.surveys = [];
+        this.survey = {};
         this.surveysState = NetworkState.init();
         //this.passwordState = NetworkState.init();
 
@@ -16,7 +17,8 @@ class SurveyStore {
             resetSurvey:SurveyActions.RESET_SURVEY,
             getAllSurveys:SurveyActions.GET_ALL_SURVEYS,
             updateAllSurveys:SurveyActions.UPDATE_ALL_SURVEYS,
-            getAllSurveysFailed:SurveyActions.GET_ALL_SURVEYS_FAILED
+            getAllSurveysFailed:SurveyActions.GET_ALL_SURVEYS_FAILED,
+            updateSurvey:SurveyActions.UPDATE_SURVEY
             //save: SettingsActions.SAVE_BASIC,
             //saveSuccess: SettingsActions.SAVE_SUCCESS,
             //saveFailed: SettingsActions.SAVE_FAILED,
@@ -37,13 +39,15 @@ class SurveyStore {
     }
 
     updateAllSurveys(surveys){
-        console.log(surveys);
         this.surveysState.succeed();
         this.surveys = surveys;
         setTimeout(SurveyActions.resetSurvey, 3000);
     }
     getAllSurveysFailed(errorMessage){
         this.surveysState.fail(errorMessage);
+    }
+    updateSurvey(survey){
+        this.survey = survey;
     }
     //save(){
     //    this.basicState.load('Saving Survey!');

@@ -6,6 +6,12 @@ var SurveySource = {
     },
     getAllSurveys:function(){
         return surveyBuilderRequest.get('/survey')
+    },
+    deleteSurvey:function(id){
+        return surveyBuilderRequest.post('/survey/delete',id)
+    },
+    answersSave:function(answers){
+        return surveyBuilderRequest.post('/survey/answer',answers)
     }
     //refresh: function (req) {
     //    return surveyBuilderRequest.post('/user/refresh', req);

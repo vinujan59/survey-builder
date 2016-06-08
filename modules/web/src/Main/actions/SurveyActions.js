@@ -4,37 +4,78 @@ import SurveySource from './../sources/SurveySource'
 class SurveyActions {
 
 
-    constructor(){
+    constructor() {
         this.generateActions('resetSurvey');
     }
 
-    //save(survey) {
-    //    SurveySource.saveSurvey(survey)
-    //        .then(this.updateBasicSuccess)
-    //        .catch(this.updateBasicFailed);
-    //    return 1;
-    //}
-    //
-    //saveSuccess(resp) {
-    //    return resp;
-    //}
-    //
-    //saveFailed(errormessage) {
-    //    return errormessage;
-    //}
-    getAllSurveys(){
+    save(survey) {
+        SurveySource.saveSurvey(survey)
+            .then(this.updateBasicSuccess)
+            .catch(this.updateBasicFailed);
+        return "success";
+    }
+
+    saveSuccess(resp) {
+        return resp;
+    }
+
+    saveFailed(errormessage) {
+        return errormessage;
+    }
+
+    getAllSurveys() {
         SurveySource.getAllSurveys()
             .then(this.updateAllSurveys)
             .catch(this.getAllSurveysFailed);
-        return 1
+        return "success";
     }
 
-    updateAllSurveys(surveys){
+    updateAllSurveys(surveys) {
         return surveys;
     }
-    getAllSurveysFailed(errorMessage){
+
+    getAllSurveysFailed(errorMessage) {
         return errorMessage;
     }
+
+    updateSurvey(survey) {
+        return survey;
+    }
+
+    deleteSurvey(id) {
+        SurveySource.deleteSurvey(id)
+            .then(this.deleteSucces)
+            .catch(this.deleteFailed);
+        return "success";
+    }
+
+    deleteSucces() {
+        this.getAllSurveys();
+        return "Success";
+    }
+
+    deleteFailed(errorMessage) {
+        return errorMessage;
+    }
+
+    //***for answering part***//
+
+    answersSave(answers) {
+        SurveySource.answersSave(answers)
+            .then(this.answersSaveSuccess)
+            .catch(this.answersSaveFailed);
+        return "success";
+    }
+
+    answersSaveSuccess(){
+        return "Success";
+    }
+
+    answersSaveFailed(errorMessage){
+        return errorMessage;
+    }
+
+    //******//
     //changePassword(req) {
     //    SettingsSource.changePassword(req)
     //        .then(this.changePasswordSuccess)

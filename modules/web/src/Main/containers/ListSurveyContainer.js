@@ -15,11 +15,14 @@ export default class ListSurveyContainer extends Component {
                     surveys: function(props){
                         return SurveyStore.getState().surveys;
                     },
+                    user:function(props){
+                        return UserStore.getState().user;
+                    },
                     surveysState: function(props){
                         return SurveyStore.getState().surveysState;
                     }
                 }}>
-                <ListSurveys></ListSurveys>
+                <ListSurveys tabToggle={this.props.tabToggle}></ListSurveys>
             </AltContainer>
         );
     }

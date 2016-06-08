@@ -38,4 +38,10 @@ public class SurveyApi {
         return new SBResponse<>(questionService.getAll());
     }
 
+    @POST
+    @Path("delete")
+    public SBResponse<String> deleteSurvey(String id) throws SBException{
+        return  new SBResponse<>(questionService.deleteSurvey(id));
+    }
+
 }

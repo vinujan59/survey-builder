@@ -11,11 +11,13 @@ export default class EditEssayQuestion extends Component {
     var description = this.props.question.description || "";
 
     return (
-      <EditQuestion type='essay' onRemove={this.handleRemove.bind(this)}>
+      <EditQuestion type='essay' className="" onRemove={this.handleRemove.bind(this)}>
         <label>Description</label>
         <TextField
             floatingLabelText="Question"
             fullWidth={true}
+            multiLine={true}
+            rows={3}
             type='text' className='description' value={description} onChange={this.handleChange.bind(this)}
         />
       </EditQuestion>
