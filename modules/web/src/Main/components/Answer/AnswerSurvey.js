@@ -39,10 +39,11 @@ export default class AnswerSurvey extends Component {
         this.setState({
             results: results
         });
-        console.log(this.state.results);
+        console.log(JSON.stringify(this.state.results));
     }
 
     handleClick() {
+        console.log(JSON.stringify(this.state.results));
         SurveyActions.answersSave(this.state.results);
     }
 
@@ -61,6 +62,7 @@ export default class AnswerSurvey extends Component {
     }
 
     render() {
+        console.log(JSON.stringify(this.state.survey));
         return (
             <Paper zDepth={3} className="survey container">
                 {!_.isEmpty(this.state.survey) &&

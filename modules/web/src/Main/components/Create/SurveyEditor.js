@@ -3,9 +3,14 @@ import { Menu,Paper,Divider,RaisedButton,FontIcon,Dialog,TextField,FlatButton} f
 import Draggable from './Draggable'
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 require('./../../app.css');
+
 import EditYesNoQuestion from './questions/EditYesNoQuestion'
 import EditMultipleChoiceQuestion from './questions/EditMultipleChoiceQuestion'
 import EditEssayQuestion from './questions/EditEssayQuestion'
+import EditDropDownQuestion from './questions/EditDropDownQuestion'
+import EditMultipleTextBoxQuestion from './questions/EditMultipleTextBoxQuestion'
+import EditRatingScaleQuestion from './questions/EditRatingScaleQuestion'
+
 import SurveyActions from './../../actions/SurveyActions'
 import SurveyStore from './../../stores/SurveyStore'
 import { browserHistory } from 'react-router'
@@ -22,7 +27,10 @@ const dividerStyle = {
 var SUPPORTED_QUESTIONS = {
     yes_no: EditYesNoQuestion,
     multiple_choice: EditMultipleChoiceQuestion,
-    essay: EditEssayQuestion
+    essay: EditEssayQuestion,
+    drop_down:EditDropDownQuestion,
+    multiple_text_box:EditMultipleTextBoxQuestion,
+    rating_scale:EditRatingScaleQuestion
 };
 
 export default class SurveyEditor extends Component {
@@ -32,6 +40,7 @@ export default class SurveyEditor extends Component {
             titleDilaogOpen: false,
             dropZoneEntered: false,
             questions: [],
+            surveyId:"",
             title:"",
             introduction:""
         }
@@ -41,6 +50,7 @@ export default class SurveyEditor extends Component {
         SurveyStore.listen((state) => {
             if(!_.isEmpty(state.survey)) {
                 this.setState({
+                    surveyId:state.survey.id,
                     questions: state.survey.questions,
                     title: state.survey.title,
                     introduction: state.survey.introduction
@@ -70,8 +80,9 @@ export default class SurveyEditor extends Component {
         this.setState({title: this.refs.title.getValue(),
             introduction: this.refs.introduction.getValue()});
         SurveyActions.save({
+            id:this.state.surveyId,
             title: this.state.title,
-            introduction: this.state.questions,
+            introduction: this.state.introduction,
             questions: this.state.questions
         });
         this.setState({titleDilaogOpen: false});
@@ -82,11 +93,13 @@ export default class SurveyEditor extends Component {
     render() {
         var questions = this.state.questions.map(function (q, i) {
             var Question = SUPPORTED_QUESTIONS[q.type];
-            return (<Question key={i}
+            return (<Question
                     onChange={this.handleQuestionChange.bind(this,i,q)}
                     onRemove={this.handleQuestionRemove.bind(this,i)}
                     question={q}
                     key={i}
+                    handleSubQuestion={this.handleSubQuestion.bind(this,i)}
+                    handleComment={this.handleComment.bind(this,i)}
                     />
             );
         }.bind(this));
@@ -130,8 +143,8 @@ export default class SurveyEditor extends Component {
                         </Paper>
                         <Divider style={dividerStyle}/>
                         <ReactCSSTransitionGroup transitionName='question' transitionAppear={true}
-                                                 transitionAppearTimeout={500} transitionEnterTimeout={500}
-                                                 transitionLeaveTimeout={500}>
+                                                 transitionAppearTimeout={1000} transitionEnterTimeout={1000}
+                                                 transitionLeaveTimeout={1000}>
                             <br/>
                             {questions}
                         </ReactCSSTransitionGroup>
@@ -162,14 +175,16 @@ export default class SurveyEditor extends Component {
                                 hintText="Please enter title of survey"
                                 ref='title'
                                 value={this.state.title}
+                                onChange={(e)=>{this.setState({title:e.target.value})}}
                                 fullWidth={true}
                             /><br/>
                             <TextField
                                 multiLine={true}
                                 fullWidth={true}
                                 type="text"
-                                row={3}
                                 value={this.state.introduction}
+                                onChange={(e)=>{this.setState({introduction:e.target.value})}}
+                                row={3}
                                 hintText="Please enter introduction for survey"
                                 ref='introduction'
                             /><br/>
@@ -197,7 +212,7 @@ export default class SurveyEditor extends Component {
     handleDrop(ev) {
         var questionType = ev.dataTransfer.getData('questionType');
         var questions = update(this.state.questions, {
-            $push: [{type: questionType}]
+            $push: [{type: questionType,isSub:false,isComment:false}]
         });
 
         this.setState({
@@ -223,9 +238,29 @@ export default class SurveyEditor extends Component {
     }
 
     handleSaveClicked(ev) {
-        console.log(this.state.questions);
         this.setState({titleDilaogOpen: true});
     }
+
+    handleSubQuestion(key,isSub){
+        var question = this.state.questions[key];
+        question.isSub = isSub;
+        var questions = update(this.state.questions, {
+            $splice: [[key, 1, question]]
+        });
+
+        this.setState({questions: questions});
+    }
+
+    handleComment(key,isChecked){
+        var question = this.state.questions[key];
+        question.isComment = isChecked;
+        var questions = update(this.state.questions, {
+            $splice: [[key, 1, question]]
+        });
+
+        this.setState({questions: questions});
+    }
+
 }
 
 SurveyEditor.PropTypes = {

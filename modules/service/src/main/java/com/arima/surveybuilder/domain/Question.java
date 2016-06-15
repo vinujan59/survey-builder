@@ -11,6 +11,12 @@ public class Question {
     public String type;
     public String description;
     public String[] options;
+    public String[] rowOptions;
+    public String[] columnOptions;
+    public boolean isComment;
+    public boolean isSub;
+    public boolean multi;
+
 
     public String toString(){
         return "{" +"type : "+type

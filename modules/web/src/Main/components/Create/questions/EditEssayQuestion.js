@@ -6,12 +6,21 @@ import { TextField} from 'material-ui';
 export default class EditEssayQuestion extends Component {
   constructor(props) {
     super(props);
+    this.state={
+      control:{
+        isSub:this.props.question.isSub || false,
+        isComment:this.props.question.isComment || false,
+      }
+    }
   }
+
   render () {
     var description = this.props.question.description || "";
 
     return (
-      <EditQuestion type='essay' className="" onRemove={this.handleRemove.bind(this)}>
+      <EditQuestion type='essay' className="" onRemove={this.handleRemove.bind(this)}
+                    handleSubQuestion={this.props.handleSubQuestion} handleComment={this.props.handleComment}
+                    control={this.state.control} >
         <label>Description</label>
         <TextField
             floatingLabelText="Question"

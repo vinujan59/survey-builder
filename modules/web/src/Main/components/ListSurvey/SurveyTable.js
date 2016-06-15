@@ -29,7 +29,7 @@ export default class SurveyTable extends Component {
             this.setState({openEdit: true, survey: survey});
         }else{
             this.props.tabToggle(1);
-            SurveyActions.updateSurvey(this.state.survey);
+            SurveyActions.updateSurvey(survey);
         }
     }
 

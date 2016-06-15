@@ -22,7 +22,12 @@ public class QuestionService {
 
     public String save(Questions questions){
         LOGGER.debug("question arrived: {}", questions);
-        surveyRepository.save(questions);
+        if(questions.id != null && !questions.id.isEmpty()){
+            surveyRepository.delete(questions.id);
+            surveyRepository.save(questions);
+        }else {
+            surveyRepository.save(questions);
+        }
         return "Success";
     }
 

@@ -16,6 +16,9 @@ export default class Draggable extends Component {
                 <DragItem text="Essay" questionType="essay"/>
                 <DragItem text="Yes / No" questionType="yes_no" />
                 <DragItem text="Multiple Choice" questionType="multiple_choice" />
+                <DragItem text="Drop Down" questionType="drop_down" />
+                <DragItem text="Multiple TextBox" questionType="multiple_text_box" />
+                <DragItem text="Rating Scale" questionType="rating_scale" />
             </Menu>
         );
     }

@@ -259,7 +259,7 @@ a {
 .survey-editor .question-leave {
   transform: translateY(0);
   opacity: 0;
-  transition: opacity 1.2s, transform 1s cubic-bezier(.52,-0.25,.52,.95);
+  transition: opacity 4s, transform 4s cubic-bezier(.52,-0.25,.52,.95);
 }
 
 .survey-editor .question-leave-active {
@@ -369,4 +369,35 @@ a {
 
 .main-nav a.active:hover {
   border-bottom: 5px solid #4ABFE2;
+}
+
+.radio-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  content: url(../../static/images/radio-row.png);
+  height: 102px;
+  width: 158px;
+}
+
+.radio-column {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  content: url(../../static/images/radio-column.png);
+  height: 96px;
+  width: 155px;
+}
+.check-row {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  content: url(../../static/images/check-row.png);
+  height: 97px;
+  width: 163px;
+}
+
+.check-column{
+  margin-top: 20px;
+  margin-bottom: 20px;
+  content: url(../../static/images/check-column.png);
+  height: 99px;
+  width: 150px;
 }

@@ -1,10 +1,19 @@
 import React, {Component,PropTypes} from 'react'
 import EditQuestion from './EditQuestion'
-import { TextField,Checkbox} from 'material-ui';
+import { TextField,Toggle} from 'material-ui';
 
 var merge = require('lodash-node/modern/object/merge');
 
 export default class  EditMultipleChoiceQuestion extends Component {
+  constructor(props){
+    super(props);
+    this.state={
+      control:{
+        isSub:this.props.question.isSub || false,
+        isComment:this.props.question.isComment || false,
+      }
+    };
+  }
 
   render () {
     var question = this.props.question;
@@ -31,7 +40,9 @@ export default class  EditMultipleChoiceQuestion extends Component {
     }.bind(this));
 
     return (
-      <EditQuestion type='multiple_choice' className='edit-multiple-choice' onRemove={this.handleRemove.bind(this)}>
+      <EditQuestion type='multiple_choice' className='edit-multiple-choice' onRemove={this.handleRemove.bind(this)}
+                    handleSubQuestion={this.props.handleSubQuestion} handleComment={this.props.handleComment}
+                    control={this.state.control} >
         <label>Description</label>
         <TextField
             floatingLabelText="Question"
@@ -40,9 +51,10 @@ export default class  EditMultipleChoiceQuestion extends Component {
             rows={3}
             type='text' className='description' value={description} onChange={this.handleDescriptionChange.bind(this)}
         />
-        <Checkbox
-            onCheck={this.handleOnCheck.bind(this)}
+        <Toggle
+            onToggle={this.handleOnToggle.bind(this)}
             label="Enable Multiple Choice"
+            toggled={this.props.question.multi}
         />
         <label>Options</label>
         <ul className='options list-unstyled'>
@@ -85,8 +97,11 @@ export default class  EditMultipleChoiceQuestion extends Component {
   handleRemove () {
     this.props.onRemove(this.props.key);
   }
-  handleOnCheck(){
 
+  handleOnToggle(e, isInputChecked) {
+    var question = this.props.question;
+    question.multi = isInputChecked;
+    this.props.onChange(this.props.key,question);
   }
 }
 
