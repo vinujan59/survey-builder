@@ -16,6 +16,7 @@ import AccountSettingContainer from './../containers/AccountSettingContainer';
 import ListSurveys from './ListSurvey/ListSurveys'
 import SurveyActions from './../actions/SurveyActions'
 import AnswerSurvey from './Answer/AnswerSurvey'
+import Analyse from './Analyse/Analyse'
 {/*import SettingsContainer from './containers/SettingsContainer'*/
 }
 
@@ -25,7 +26,7 @@ export default class Main extends Component {
         this.state = UserStore.getState();
         this.state.surveys = SurveyStore.getState().surveys;
         this.state.tabIndex = 0;
-        setTimeout(SurveyActions.getAllSurveys(),0);
+        setInterval(SurveyActions.getAllSurveys(),0);
     }
 
     componentDidMount() {
@@ -81,8 +82,18 @@ export default class Main extends Component {
                                         value={1}>
                                         <EditSurvey tabToggle={this.handleChangeTab.bind(this)}/>
                                     </Tab>
-                                ) : (
-                                    <Tab
+                                ) :
+                                (this.state.user.role === 'analyse' ) ?
+                                    (
+                                        <Tab
+                                            icon={<FontIcon className="fa fa-edit fa-2x"></FontIcon>}
+                                            label="Analyse"
+                                            onActive={()=>{this.forceUpdate()}}
+                                            value={1}>
+                                            <Analyse />
+                                        </Tab>
+                                    )
+                                :(<Tab
                                         icon={<FontIcon className="fa fa-edit fa-2x"></FontIcon>}
                                         label="Answer"
                                         value={1}>

@@ -6,9 +6,16 @@ import UserActions from './../actions/UserActions'
 import { browserHistory } from 'react-router';
 
 import { FloatingActionButton, Avatar, FontIcon,
-    TextField, Checkbox, RaisedButton, IconButton} from 'material-ui'
+    TextField, Checkbox, RaisedButton, IconButton,FlatButton,Dialog} from 'material-ui'
 
 class Login extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            isRegister: false,
+            passWordError: ""
+        };
+    }
 
     login() {
         var user = {
@@ -66,7 +73,59 @@ class Login extends Component {
                         }
                     </div>
                 </div>
+                <div className="margin-top-40 text-center">
+                    <RaisedButton label="Register"
+                                  secondary={true}
+                                  onClick={()=>{this.setState({isRegister:true})}}/>
+                </div>
+                <Dialog
+                    title="Register"
+                    modal={false}
+                    open={this.state.isRegister}
+                    onRequestClose={()=>{this.setState({isRegister:false})}}
+                >
+                    <div className="row">
+                        <div className="col-md-12 text-center">
 
+                            <TextField
+                                type="UserName"
+                                hintText="Please type user name"
+                                ref='username'
+                            /><br/>
+                            <TextField
+                                type="password"
+                                hintText="Password"
+                                ref='regpassword'
+                            /><br/>
+                            <TextField
+                                type="password"
+                                hintText="Confirm password"
+                                onChange={()=>{if(this.refs.PassConfirm.getValue() != this.refs.regpassword.getValue()){this.setState({passWordError:"Password not matching!"})}else{this.setState({passWordError:""})}}}
+                                ref='PassConfirm'
+                                errorText={this.state.passWordError}
+                            /><br/>
+                        </div>
+
+                        <div className="col-md-12 text-center">
+                            <div>
+                                <FlatButton
+                                    label="Later"
+                                    secondary={true}
+                                    onTouchTap={()=>{this.setState({isRegister:false})}}
+                                />
+                                <FlatButton
+                                    label="Register"
+                                    primary={true}
+                                    keyboardFocused={true}
+                                    onTouchTap={()=>{
+
+                                            }
+                                        }
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </Dialog>
             </div>
         )
     }

@@ -1,6 +1,7 @@
 package com.arima.surveybuilder.service;
 
 
+import com.arima.surveybuilder.mysql.AnswerRepository;
 import com.arima.surveybuilder.data.repo.SurveyRepository;
 import com.arima.surveybuilder.domain.Questions;
 import org.slf4j.Logger;
@@ -15,8 +16,13 @@ public class QuestionService {
     private static final Logger LOGGER = LoggerFactory.getLogger(QuestionService.class);
     @Autowired
     SurveyRepository surveyRepository;
+
+    @Autowired
+    AnswerRepository answerRepository;
+
     public String test(){
         LOGGER.debug("User registerUser req received with params : {}", "hi");
+//        answerRepository.save(new Answer("dsdsdsdsdsdsd","dssdsdsds"));
         return "hi";
     }
 
@@ -36,7 +42,7 @@ public class QuestionService {
     }
 
     public String deleteSurvey(String id){
-        LOGGER.debug("deleted survey: {}", id);
+        LOGGER.debug("deleted survey: {}"+ id);
         surveyRepository.delete(surveyRepository.findOne(id));
         return "Success";
     }

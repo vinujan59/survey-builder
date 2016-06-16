@@ -24,7 +24,7 @@ export default class EditRatingScaleQuestion extends Component {
     }
 
     render() {
-        console.log(JSON.stringify(this.props.question));
+        //console.log(JSON.stringify(this.props.question));
         var question = this.props.question;
 
         var description = question.description || "";

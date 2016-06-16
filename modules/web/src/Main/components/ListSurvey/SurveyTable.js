@@ -14,6 +14,7 @@ export default class SurveyTable extends Component {
     }
 
     deleteSurvey() {
+        console.log(this.state.survey);
         SurveyActions.deleteSurvey(this.state.survey.id);
         this.setState({openEdit: false});
     }

@@ -11,7 +11,6 @@ class SurveyStore {
         this.surveys = [];
         this.survey = {};
         this.surveysState = NetworkState.init();
-        //this.passwordState = NetworkState.init();
 
         this.bindListeners({
             resetSurvey:SurveyActions.RESET_SURVEY,

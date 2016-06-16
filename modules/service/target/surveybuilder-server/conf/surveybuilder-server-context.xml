@@ -32,4 +32,6 @@
 
     <import resource="surveybuilder-data-config.xml"/>
 
+    <import resource="surveybuilder-data-mysql-config.xml"/>
+
 </beans>

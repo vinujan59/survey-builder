@@ -9,10 +9,11 @@ class SurveyActions {
     }
 
     save(survey) {
+        console.log(JSON.stringify(survey));
         SurveySource.saveSurvey(survey)
-            .then(this.updateBasicSuccess)
-            .catch(this.updateBasicFailed);
-        return "success";
+            .then(this.saveSuccess)
+            .catch(this.saveFailed);
+        return 1;
     }
 
     saveSuccess(resp) {
@@ -27,7 +28,7 @@ class SurveyActions {
         SurveySource.getAllSurveys()
             .then(this.updateAllSurveys)
             .catch(this.getAllSurveysFailed);
-        return "success";
+        return 1;
     }
 
     updateAllSurveys(surveys) {

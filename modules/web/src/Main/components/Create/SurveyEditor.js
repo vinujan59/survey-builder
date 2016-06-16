@@ -79,15 +79,19 @@ export default class SurveyEditor extends Component {
     detailClose() {
         this.setState({title: this.refs.title.getValue(),
             introduction: this.refs.introduction.getValue()});
-        SurveyActions.save({
-            id:this.state.surveyId,
+        var item = {
             title: this.state.title,
             introduction: this.state.introduction,
             questions: this.state.questions
-        });
+        };
+        if(this.state.surveyId){
+            item[id] = this.state.surveyId;
+        }
+        SurveyActions.save(item);
         this.setState({titleDilaogOpen: false});
         SurveyActions.getAllSurveys();
-        this.props.tabToggle(0);
+        this.handleClearClicked();
+        setTimeout(this.props.tabToggle(0),3000);
     }
 
     render() {
@@ -143,7 +147,7 @@ export default class SurveyEditor extends Component {
                         </Paper>
                         <Divider style={dividerStyle}/>
                         <ReactCSSTransitionGroup transitionName='question' transitionAppear={true}
-                                                 transitionAppearTimeout={1000} transitionEnterTimeout={1000}
+                                                 transitionAppearTimeout={1000} transitionEnterTimeout={500}
                                                  transitionLeaveTimeout={1000}>
                             <br/>
                             {questions}
@@ -238,6 +242,7 @@ export default class SurveyEditor extends Component {
     }
 
     handleSaveClicked(ev) {
+
         this.setState({titleDilaogOpen: true});
     }
 
